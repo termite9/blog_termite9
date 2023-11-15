@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="navbar">
+                    {% if post.thumbnail %}
+                        <img src ="{{post.thumbnail.url}} " alt="">
+                    {% else %}
+                        <img src="" alt="">
+                    {% endif %}
+
+
+        <span >{{ post.title}}</span>
+    </div>
+    <div id="post-detail">
+        <p>{{post.content|linebreaksbr}}</p>
+        <ul class="comments">
+            {% for comment in post.comment_set.all %}
+                <li class="comment">{{comment.content}}</li>
+            {% empty %}
+                <li class="comment_empty">아직 댓글이 없습니다</li>
+            {% endfor %}
+        </ul>
+        <form method="POST">
+            {% csrf_token %}
+            <textarea class="textarea_font" name="comment" cols="50" rows="8">[{{user.username}}] </textarea>
+            <button type="submit" class="btn btn-primary">댓글 작성</button>
+        </form>
+    </div>
+    <div class="center">
+        <button>
+            <a href="/posts/"><h3>블로그리스트로 가기</h3></a>
+        </button>
+    </div>
+
+</body>
+</html>

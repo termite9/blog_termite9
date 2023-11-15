@@ -1,0 +1,40 @@
+
+{% load static %}
+
+<!DOCTYPE html >
+<html lang="ko" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div id="navbar" >
+        <span>글 작성</span>
+    </div>
+        <div id="post-add">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+                    <label><h2>제목</h2></label>
+                    <input name="title" type="text"  placeholder="" size="125">
+                    <span><input name="write_date" type="date" ></span>
+                </div>
+                <div>
+                    <label><h3>내용</h3></label>
+                    <textarea class="textarea_font" name="content" cols  ="50" rows="10"> {{user.username}} > </textarea>
+                </div>
+                <div>
+                    <label>썸네일</label>
+                    <input name="thumbnail" type="file">
+                </div>
+                <button type="submit" class="btn btn-primary">저장</button>
+            </form>
+        </div>
+        <div class="center">
+            <button>
+                <a href="/posts/"><h3>블로그리스트로 가기</h3></a>
+            </button>
+        </div>
+</body>
+</html>
