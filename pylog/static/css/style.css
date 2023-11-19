@@ -422,7 +422,7 @@ ul.posts>li.post img[alt]:after {
 }
 
 #post-add textarea {
-  width: 100%;
+  width: 1000px;
   min-height: 100px;
   box-sizing: border-box;
   resize: none;
@@ -433,7 +433,7 @@ ul.posts>li.post img[alt]:after {
 }
 
 #post-add>form>div {
-  padding: 10px;
+  padding: 50px;
 }
 
 #post-add>form>div>label {
