@@ -228,7 +228,7 @@ ul.comments>li.comment-empty {
   }
 
   #post-list {
-    margin-left: 5px;
+    margin-left: 50px;
     padding: 14vw 0;
   }
 
@@ -358,8 +358,8 @@ ul.posts>li.post img[alt]:after {
 }
 
 #post-detail {
-  margin: 50px 50px;
-  padding: 59px 10px;
+  margin: 30px 150px;
+  padding: 29px 150px;
 }
 
 #post-detail p {
