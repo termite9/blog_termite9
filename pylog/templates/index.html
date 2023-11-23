@@ -13,7 +13,8 @@
 
 
     <div class="index">
-        <h1> <a href="/posts/">Blog termite9</a></h1>
+<!--        <h1> <a href="/posts/">Blog termite9</a></h1>-->
+        <h1>Blog termite9</a></h1>
         <small>life is short, You need Blog</small>
         <div class="btn_user btn-primary">User name : {{user.username}}</div>
 
@@ -30,17 +31,17 @@
                 <br>
                 <form method="POST" class="index-login">
                     <br>
-                    <h2> <a href="/posts"><strong>Blog termite9</strong></a></h2>
+                    <h2> <strong>Blog termite9</strong></h2>
                     <br>
 
                     {% csrf_token %}
                     <!--                            {{form.as_p}}-->
                     <!--                            <button type="submit" class="btn btn-login" >로그인</button>-->
                     <div>
-                        <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 페이지로 이동</strong></a></h2>
+                        <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>
                         <br>
                         <br>
-                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>
+<!--                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>-->
                     </div>
                 </form>
             </div>
