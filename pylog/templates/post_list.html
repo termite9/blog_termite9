@@ -37,7 +37,7 @@
                         {% for comment in post.comment_set.all %}
                             <li class="comment">{{comment.content}}</li>
                         {% empty %}
-                            <li class="comment-empty">아직 댓글이 없습니다.</li>
+                            <li class="comment-empty">*아직 댓글이 없습니다</li>
                         {% endfor %}
                     </ul>
                     {% if post.thumbnail %}

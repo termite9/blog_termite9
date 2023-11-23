@@ -312,10 +312,11 @@ ul.posts>li.post h3 {
 }
 
 ul.posts>li.post p {
-  display: -webkit-box;
+
+  /* display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: hidden; */
   font-size: 1.2rem;
 }
 
