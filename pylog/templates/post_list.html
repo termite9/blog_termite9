@@ -1,3 +1,4 @@
+
 {% load static %}
 
 
@@ -32,7 +33,7 @@
                     <div>
                         <a href="/posts/{{post.id}}/"><h3>제목 : {{post.title}}</h3></a>
                     </div>
-                    <p class="liststyle">( {{post.write_date}})  {{ post.content}}</p>
+                    <p>{{post.id}}-( {{post.write_date}})  {{ post.content}}</p>
                     <ul class="comments">
                         {% for comment in post.comment_set.all %}
                             <li class="comment">{{comment.content}}</li>

@@ -12,11 +12,23 @@
 <body>
 
 
-    <div class="index">
+    <div id="index">
 <!--        <h1> <a href="/posts/">Blog termite9</a></h1>-->
         <h1>Blog termite9</a></h1>
         <small>life is short, You need Blog</small>
         <div class="btn_user btn-primary">User name : {{user.username}}</div>
+                <div id="login">
+                    <form method="POST" class="index-login">
+                        {% csrf_token %}
+                        <!--                            {{form.as_p}}-->
+                        <!--                            <button type="submit" class="btn btn-login" >로그인</button>-->
+                        <div>
+                            <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>
+    <!--                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>-->
+                        </div>
+                   </form>
+                </div>
+
 
     </div>
     <div class="grid-container">
@@ -27,24 +39,24 @@
         <div class="grid-item">Python Game</div>
         <div class="grid-item">Python Game</div>
         <div class="grid-item">
-            <div id="login">
-                <br>
-                <form method="POST" class="index-login">
-                    <br>
-                    <h2> <strong>Blog termite9</strong></h2>
-                    <br>
+<!--            <div id="login">-->
+<!--                <br>-->
+<!--                <form method="POST" class="index-login">-->
+<!--                    <br>-->
+<!--                    <h2> <strong>Blog termite9</strong></h2>-->
+<!--                    <br>-->
 
-                    {% csrf_token %}
-                    <!--                            {{form.as_p}}-->
-                    <!--                            <button type="submit" class="btn btn-login" >로그인</button>-->
-                    <div>
-                        <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>
-                        <br>
-                        <br>
-<!--                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>-->
-                    </div>
-                </form>
-            </div>
+<!--                    {% csrf_token %}-->
+<!--                    &lt;!&ndash;                            {{form.as_p}}&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <button type="submit" class="btn btn-login" >로그인</button>&ndash;&gt;-->
+<!--                    <div>-->
+<!--                        <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>-->
+<!--                        <br>-->
+<!--                        <br>-->
+<!--&lt;!&ndash;                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
         </div>
         <div class="grid-item"> What?</div>
         <div class="grid-item"></div>
