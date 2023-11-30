@@ -13,57 +13,49 @@
 
 
     <div id="index">
-<!--        <h1> <a href="/posts/">Blog termite9</a></h1>-->
+        <!--        <h1> <a href="/posts/">Blog termite9</a></h1>-->
         <h1>Blog termite9</a></h1>
         <small>life is short, You need Blog</small>
         <div class="btn_user btn-primary">User name : {{user.username}}</div>
-                <div id="login">
-                    <form method="POST" class="index-login">
-                        {% csrf_token %}
-                        <!--                            {{form.as_p}}-->
-                        <!--                            <button type="submit" class="btn btn-login" >로그인</button>-->
-                        <div>
-                            <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>
-    <!--                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>-->
-                        </div>
-                   </form>
+        <div id="login">
+            <form method="POST" class="index-login">
+                {% csrf_token %}
+                <!--                            {{form.as_p}}-->
+                <!--                            <button type="submit" class="btn btn-login" >로그인</button>-->
+                <div>
+                    <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>
+                    <!--                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>-->
                 </div>
+            </form>
+        </div>
 
 
     </div>
     <div class="grid-container">
-        <div class="grid-item">소설읽기
-            <h3 class="sonagi"> <a href="https://654d900c8dc67b10e4b13d64--candid-cucurucho-549303.netlify.app">소설 황순원
+        <div class="grid-item">
+            <br>
+            <h3 class="sonagi"> <a href="/posts/"><strong>자유게시판</strong></a></h3>
+        </div>
+        <div class="grid-item">
+            <br>
+            <h3 class="sonagi"><a href="https://6566c5e57d795b1b2cec8ce6--termite9.netlify.app/">termite9 HomePage</a>
+            </h3>
+            <br>
+            <h3 class="sonagi"><a href="https://termite9.github.io/firebase/">termite9 Album</a></h3>
+            <br>
+        </div>
+
+        <div class="grid-item"> 소설읽기
+            <h3 class="sonagi"> <a href="https://654d900c8dc67b10e4b13d64--termite9.netlify.app/"> 황순원
                     원작 [소나기]</a></h3>
         </div>
-        <div class="grid-item">Python Game</div>
-        <div class="grid-item">Python Game</div>
-        <div class="grid-item">
-<!--            <div id="login">-->
-<!--                <br>-->
-<!--                <form method="POST" class="index-login">-->
-<!--                    <br>-->
-<!--                    <h2> <strong>Blog termite9</strong></h2>-->
-<!--                    <br>-->
 
-<!--                    {% csrf_token %}-->
-<!--                    &lt;!&ndash;                            {{form.as_p}}&ndash;&gt;-->
-<!--                    &lt;!&ndash;                            <button type="submit" class="btn btn-login" >로그인</button>&ndash;&gt;-->
-<!--                    <div>-->
-<!--                        <h2> <a href="/users/login" class="btn btn-login"><strong>로그인 (private)</strong></a></h2>-->
-<!--                        <br>-->
-<!--                        <br>-->
-<!--&lt;!&ndash;                        <a href="/users/signup/" class="btn btn-login"><strong>회원가입 페이지로 이동</strong></a>&ndash;&gt;-->
-<!--                    </div>-->
-<!--                </form>-->
-<!--            </div>-->
-        </div>
+        <div class="grid-item"> </div>
         <div class="grid-item"> What?</div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
     </div>
-    <br>
 
 
 </body>

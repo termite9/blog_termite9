@@ -11,10 +11,12 @@ from django.shortcuts import render
 from users.forms import LoginForm
 
 # Create your views here.
+
+
 def index(request):
 
     # if not request.user.is_authenticated:
-     # return redirect("/posts/")
+    # return redirect("/posts/")
     # form = LoginForm()
     # context = {
     #     "form": form,
@@ -29,12 +31,9 @@ def index(request):
     return render(request, "/users/login.html")
 
 
-
-
 def post_list(request):
 
     posts = list(reversed(Post.objects.all()))
-    # posts=reversed(posts1)
     page = int(request.GET.get('page', 1))
 
     paginator = Paginator(posts, 5)
@@ -42,44 +41,38 @@ def post_list(request):
     context = {
         "posts": page_obj,
     }
-    # context = {
-    #     "posts": posts,
-    # }
-    # return render(request, 'post_list.html',  context)
 
     return render(request, 'post_list.html',  context)
-    # posts1=Post.objects.all()
-    # posts=reversed(posts1)
-    # context = {
-    #     "posts": posts,
-    # }
-    # return render(request, "post_list.html", context)
+
 
 def post_detail(request, post_id):
     post = Post.objects.get(id=post_id)
-    if request.method =="POST":
+    if request.method == "POST":
         comment_content = request.POST["comment"]
         Comment.objects.create(
             post=post,
             content=comment_content,
         )
     context = {
-        "post" : post,
+        "post": post,
     }
     return render(request, "post_detail.html", context)
 
+
 def post_add(request):
-    if request.method == "POST" :
-        title=request.POST["title"]
-        write_date=request.POST["write_date"]
-        content=request.POST["content"]
+    if request.method == "POST":
+        title = request.POST["title"]
+        write_date = request.POST["write_date"]
+        content = request.POST["content"]
+        writer = request.POST["writer"]
         if "thumbnail" in request.FILES:
             thumbnail = request.FILES["thumbnail"]
             post = Post.objects.create(
-            title=title,
-            write_date=write_date,
-            content=content,
-            thumbnail=thumbnail,
+                title=title,
+                write_date=write_date,
+                content=content,
+                thumbnail=thumbnail,
+                writer=writer,
             )
 
         else:
@@ -87,10 +80,9 @@ def post_add(request):
                 title=title,
                 write_date=write_date,
                 content=content,
+                writer=writer,
             )
         return redirect(f"/posts/{post.id}")
 
-
     else:
-       return render(request, "post_add.html")
-
+        return render(request, "post_add.html")

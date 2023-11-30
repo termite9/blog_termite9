@@ -49,7 +49,7 @@ html {
 
   row-gap: 10px;
   column-gap: 10px;
-  background-color: #f6eaea;
+  background-color: #faf5f5;
   margin-left: 20px;
   margin-right: 5px;
   padding: 5px;
@@ -64,7 +64,7 @@ html {
 }
 
 /* 스마트폰에 대한 미디어 쿼리 */
-@media only screen and (min-width : 760px) {
+@media only screen and (max-width : 760px) {
   .grid-container {
     display: grid;
 
@@ -141,6 +141,8 @@ form.index-login {
 
 .sonagi {
   text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
 }
 
 
@@ -218,6 +220,11 @@ a.btn {
   height: 28px;
 }
 
+div.btn_user.btn-primary {
+  color: #0000ff;
+  font-size: 20px;
+  font-weight: 600;
+}
 
 .btn-primary {
   border: 1px solid #00c3bd;

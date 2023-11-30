@@ -28,7 +28,7 @@
     <div id="post-list">
         <ul class="posts">
             {% for post in posts %}
-
+            {% if request.user.is_authenticated %}
                 <li class="post">
                     <div>
                         <a href="/posts/{{post.id}}/"><h3>제목 : {{post.title}}</h3></a>
@@ -47,6 +47,30 @@
                         <img src="" alt="">
                     {% endif %}
                 </li>
+            {% else %}
+               {% if post.writer %}
+
+               {% else %}
+                <li class="post">
+                    <div>
+                        <a href="/posts/{{post.id}}/"><h3>제목 : {{post.title}}</h3></a>
+                    </div>
+                    <p>{{post.id}}-( {{post.write_date}})  {{ post.content}}</p>
+                    <ul class="comments">
+                        {% for comment in post.comment_set.all %}
+                            <li class="comment">{{comment.content}}</li>
+                        {% empty %}
+                            <li class="comment-empty">*아직 댓글이 없습니다</li>
+                        {% endfor %}
+                    </ul>
+                    {% if post.thumbnail %}
+                        <img src ="{{post.thumbnail.url}} " alt="">
+                    {% else %}
+                        <img src="" alt="">
+                    {% endif %}
+                </li>
+            {% endif %}
+            {% endif %}
             {% endfor %}
         </ul>
     </div>
