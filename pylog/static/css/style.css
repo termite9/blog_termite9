@@ -409,10 +409,15 @@ ul.posts>li.post img {
   width: 220px;
   height: 250px;
   object-fit: cover;
+  border: 5px ridge cornflowerblue;
+
+
 }
 
 ul.posts>li.post img:hover {
-  transform: scale(2);
+  transform: scale(1.5);
+  z-index: 999;
+
   border: 5px ridge cornflowerblue;
 }
 
