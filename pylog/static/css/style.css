@@ -39,7 +39,9 @@ html {
   line-height: 30px;
 }
 
-
+.body {
+  background-image: white url("images/1655.jpg");
+}
 
 /* 기본 스타일 */
 .grid-container {
@@ -59,7 +61,7 @@ html {
   background-color: #eee;
 }
 
-.grid-item:nth-child(2n) {
+.gri .grid-item:nth-child(2n) {
   background-color: #ddd;
 }
 
@@ -68,8 +70,10 @@ html {
   .grid-container {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 250px 250px 250px 250px;
+    /* column 과 row조정전 grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px 250px 250px; */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -186,8 +190,14 @@ form.index-login {
 
 #navbar .btn_logout {
   position: absolute;
-  left: 100px;
+  left: 50px;
 }
+
+#navbar .btn_termite9_homepage {
+  position: absolute;
+  left: 140px;
+}
+
 
 .btn,
 .btn_logout {
@@ -300,12 +310,12 @@ ul.comments>li.comment-empty {
   }
 
   ul.posts>li.post h3 {
-    font-size: 1.3rem;
+    font-size: 5vw;
     text-decoration: underline;
   }
 
   ul.posts>li.post p {
-    font-size: .9rem;
+    font-size: 4vw;
     padding-right: 22vw;
     white-space: pre;
 

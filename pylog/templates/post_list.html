@@ -21,6 +21,8 @@
         <a href="/posts/add" class="btn btn-primary">글 작성</a>
         {% if user.username %}
             <a href="/users/logout/" class="btn_logout btn-primary">로그아웃</a>
+            <a href="https://65689beee4992b0a5fec33ba--termite9.netlify.app/" class="btn_termite9_homepage btn-primary">termite9 homepage</a>
+
         {% else %}
             <a href="/users/logout/" class="btn_logout btn-primary">로그인</a>
         {% endif %}
@@ -29,6 +31,7 @@
         <ul class="posts">
             {% for post in posts %}
             {% if request.user.is_authenticated %}
+
                 <li class="post">
                     <div>
                         <a href="/posts/{{post.id}}/"><h3>제목 : {{post.title}}</h3></a>
