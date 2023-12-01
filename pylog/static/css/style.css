@@ -39,9 +39,6 @@ html {
   line-height: 30px;
 }
 
-.body {
-  background-image: white url("images/1655.jpg");
-}
 
 /* 기본 스타일 */
 .grid-container {
@@ -352,7 +349,7 @@ ul.posts>li.post {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 20px 130px 20px 0;
+  padding: 20px 250px 20px 20px;
 
 }
 
@@ -390,6 +387,9 @@ ul.posts>li.post p {
   list-style: disc;
   white-space: pre-line;
   font-size: 1.2rem;
+  font-weight: 500;
+  /* font-family: 'Nanum Myeongjo', serif; */
+  font-family: '굴림', 'Gulim', 'Myeongjo', serif;
 }
 
 ul.posts>li.post .comments {
@@ -398,15 +398,16 @@ ul.posts>li.post .comments {
   -webkit-box-orient: vertical;
   overflow: hidden; */
   font-size: 1rem;
+  font-family: '굴림', 'Gulim', 'Myeongjo', serif;
 
 }
 
 ul.posts>li.post img {
   position: absolute;
-  top: 17px;
+  top: 5px;
   right: 0;
-  width: 120px;
-  height: 120px;
+  width: 220px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -431,6 +432,14 @@ ul.posts>li.post img[alt]:after {
   content: attr(alt);
 }
 
+@media only screen and (max-width : 760px) {
+  ul.posts>li.post {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
 #post-detail {
   /* margin-left: 50px;
   padding: 14vw 0; */
@@ -453,10 +462,14 @@ ul.posts>li.post img[alt]:after {
 #post-detail ul.post-detail-comments li.post-detail-comment {
   list-style: disc;
   margin-left: 1.5em;
+  font-family: '굴림', 'Gulim', 'Myeongjo', serif;
+
 }
 
 #post-detail ul.post-detail-comments li.post-detail-comment-empty {
   font-style: italic;
+  font-family: '굴림', 'Gulim', 'Myeongjo', serif;
+
 }
 
 #post-detail>form {
