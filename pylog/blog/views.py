@@ -22,13 +22,15 @@ def index(request):
     #     "form": form,
     # }
     #
+    posts = list(reversed(Post.objects.all()))
+    #
     # posts = Post.objects.all()
     # comment_form = CommentForm()
-    # context = {
-    #     "posts" : posts,
+    context = {
+        "posts" : posts,
     #            "comment_form" : comment_form,
-    #            }
-    return render(request, "/users/login.html")
+               }
+    return render(request, "index.html",context)
 
 
 def post_list(request):

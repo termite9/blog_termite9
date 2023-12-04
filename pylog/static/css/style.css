@@ -56,7 +56,13 @@ html {
 
 .grid-item {
   background-color: #eee;
+  background-image: url(../my_image/images/1.JPG);
 }
+
+.grid-item h3 {
+  z-index: 12000;
+}
+
 
 .gri .grid-item:nth-child(2n) {
   background-color: #ddd;
@@ -416,8 +422,14 @@ ul.posts>li.post img {
   height: 20vh;
   object-fit: cover;
   border: 5px ridge cornflowerblue;
+}
 
-
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: none;
+  border: 1px solid cornflowerblue;
 }
 
 ul.posts>li.post img:hover {
