@@ -45,7 +45,7 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 250px 250px;
-
+  width: 100%;
   row-gap: 10px;
   column-gap: 10px;
   background-color: #faf5f5;
@@ -54,19 +54,70 @@ html {
   padding: 5px;
 }
 
-.grid-item {
+.grid-item1 {
   background-color: #eee;
   background-image: url(../my_image/images/1.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
 }
+
+.grid-item2 {
+  background-color: #eee;
+  background-image: url(../my_image/images/2.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+
+}
+
+.grid-item3 {
+  background-color: #eee;
+  background-image: url(../my_image/images/sonagi.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+
+}
+
+.grid-item4 {
+  background-color: #eee;
+  background-image: url(../my_image/images/4.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+
+}
+
+.grid-item5 img {
+  width: 100%;
+  border: 4px ridge burlywood;
+
+}
+
+.grid-item6 img {
+  width: 100%;
+  border: 4px ridge burlywood;
+
+}
+
+.grid-item7 img {
+  width: 100%;
+  border: 4px ridge burlywood;
+
+}
+
+.grid-item8 img {
+  width: 100%;
+  border: 4px ridge burlywood;
+
+}
+
 
 .grid-item h3 {
-  z-index: 12000;
+  z-index: 2;
 }
 
 
-.gri .grid-item:nth-child(2n) {
+/* .gri .grid-item:nth-child(2n) {
   background-color: #ddd;
-}
+} */
 
 /* 스마트폰에 대한 미디어 쿼리 */
 @media only screen and (max-width : 760px) {
@@ -237,7 +288,7 @@ a.btn {
 }
 
 div.btn_user.btn-primary {
-  color: #0000ff;
+  color: white;
   font-size: 20px;
   font-weight: 600;
 }
@@ -593,15 +644,15 @@ ul.posts>li.post img[alt]:after {
 }
 
 #post-add>form>div:nth-of-type(1)>input {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #post-add>form>button {
-  background-color: rgb(189, 229, 167);
+  background-color: rgb(95, 218, 29);
   position: fixed;
   top: 510px;
   right: 320px;
-  z-index: 100000;
+  z-index: 100;
 }
 
 button {
@@ -615,12 +666,13 @@ button {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  background-color: antiquewhite;
 
 }
 
 .center button {
-  color: #215ecf;
-  font-size: 1.7rem;
+  color: red;
+  font-size: 1.5rem;
   border-style: none;
   font-family: 'Nanum Myeongjo', serif;
 

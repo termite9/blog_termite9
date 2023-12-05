@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from config.views import index
-from blog.views import post_list, post_detail, post_add,index
+from blog.views import post_list, post_detail, post_add, index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,7 +29,6 @@ urlpatterns = [
     path("posts/", post_list, name="page"),
     path("posts/<int:post_id>/", post_detail),
     path("posts/add", post_add),
-
 ]
 
 urlpatterns += static(

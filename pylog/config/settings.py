@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR =BASE_DIR / "templates"
+TEMPLATES_DIR = BASE_DIR / "templates"
 AUTH_USER_MODEL = "users.User"
 
 
@@ -29,11 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = ["*"]
 
 
-
 # Application definition
 
 INSTALLED_APPS = [
-    # 'posts',
     'users',
     'blog',
     'django.contrib.admin',
@@ -81,7 +79,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR .parent/ "pylog-db.sqlite3",
+        'NAME': BASE_DIR .parent / "pylog-db.sqlite3",
     }
 }
 
@@ -117,8 +115,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -132,4 +128,3 @@ MEDIA_ROOT = BASE_DIR.parent / "pylog-media"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
