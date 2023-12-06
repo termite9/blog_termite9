@@ -3,31 +3,36 @@
 
 <!DOCTYPE html>
 <html lang="ko" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
 
 </head>
+
 <body>
     <div id="navbar">
         <a href=" /"><span>Blog termite9</span></a>
-         <h6><p>__{{user.username}}</p></h6>
+        <h6>
+            <p>__{{user.username}}</p>
+        </h6>
         <a href="/posts/add" class="btn btn-primary">글 작성</a>
-            {% if user.username %}
-                <a href="/users/logout/" class="btn_logout btn-primary">로그아웃</a>
-                <a href="https://656be136c3408b2ea7eb2278--termite9.netlify.app/" class="btn_termite9_homepage btn-primary">termite9 homepage</a>
+        {% if user.username %}
+        <a href="/users/logout/" class="btn_logout btn-primary">로그아웃</a>
+        <a href="https://656be136c3408b2ea7eb2278--termite9.netlify.app/"
+            class="btn_termite9_homepage btn-primary">termite9 homepage</a>
 
-            {% else %}
-                <a href="/users/logout/" class="btn_logout btn-primary">로그인</a>
-            {% endif %}
+        {% else %}
+        <a href="/users/logout/" class="btn_logout btn-primary">로그인</a>
+        {% endif %}
     </div>
-    <div id="post-list">
+    <!-- <div id="post-list">
         <ul class="posts">
             {% for post in posts %}
             {% if request.user.is_authenticated %}
@@ -76,7 +81,63 @@
             {% endif %}
             {% endfor %}
         </ul>
+    </div> -->
+
+
+    <div id="post-list">
+        <ul class="posts">
+            {% if request.user.is_authenticated %}
+            {% for post in posts %}
+            <li class="post">
+                <div>
+                    <a href="/posts/{{post.id}}/">
+                        <h3>제목 : {{post.title}}</h3>
+                    </a>
+                </div>
+                <p>{{post.id}}-( {{post.write_date}}) {{ post.content}}</p>
+                <ul class="comments">
+                    {% for comment in post.comment_set.all %}
+                    <li class="comment">{{comment.content}}</li>
+                    {% empty %}
+                    <li class="comment-empty">*아직 댓글이 없습니다</li>
+                    {% endfor %}
+                </ul>
+                {% if post.thumbnail %}
+                <img src="{{post.thumbnail.url}} " alt="">
+                {% else %}
+                <img src="" alt="">
+                {% endif %}
+            </li>
+            {% endfor %}
+
+            {% else %}
+            {% for post in posts_free %}
+            <li class="post">
+                <div>
+                    <a href="/posts/{{post.id}}/">
+                        <h3>제목 : {{post.title}}</h3>
+                    </a>
+                </div>
+                <p>{{post.id}}-( {{post.write_date}}) {{ post.content}}</p>
+                <ul class="comments">
+                    {% for comment in post.comment_set.all %}
+                    <li class="comment">{{comment.content}}</li>
+                    {% empty %}
+                    <li class="comment-empty">*아직 댓글이 없습니다</li>
+                    {% endfor %}
+                </ul>
+                {% if post.thumbnail %}
+                <img src="{{post.thumbnail.url}} " alt="">
+                {% else %}
+                <img src="" alt="">
+                {% endif %}
+            </li>
+            {% endfor %}
+
+            {% endif %}
+        </ul>
     </div>
+
 <!-- Pagination -->
 
 <!--    페이징 시작-->

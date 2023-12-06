@@ -27,21 +27,34 @@ def index(request):
     # posts = Post.objects.all()
     # comment_form = CommentForm()
     context = {
-        "posts" : posts,
-    #            "comment_form" : comment_form,
-               }
-    return render(request, "index.html",context)
+        "posts": posts,
+        #            "comment_form" : comment_form,
+    }
+    return render(request, "index.html", context)
 
 
 def post_list(request):
 
     posts = list(reversed(Post.objects.all()))
+    posts_free = list((Post.objects.filter(writer='').order_by('-pk')))
     page = int(request.GET.get('page', 1))
 
-    paginator = Paginator(posts, 5)
-    page_obj = paginator.get_page(page)
+    # paginator = Paginator(posts, 5)
+    # page_obj_posts = paginator_posts.get_page(page)
+    # page_obj = paginator.get_page(page)
+    # context = {
+    #     "posts": page_obj,
+    #     "posts_free":posts_free,
+    # }
+    paginator_posts = Paginator(posts, 5)
+    page_obj_posts = paginator_posts.get_page(page)
+
+    paginator_posts_free = Paginator(posts_free, 5)
+    page_obj_posts_free = paginator_posts_free.get_page(page)
+
     context = {
-        "posts": page_obj,
+        "posts": page_obj_posts,
+        "posts_free": page_obj_posts_free,
     }
 
     return render(request, 'post_list.html',  context)

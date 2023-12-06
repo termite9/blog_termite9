@@ -59,6 +59,8 @@ html {
   background-image: url(../my_image/images/1.JPG);
   background-size: cover;
   border: 4px ridge burlywood;
+  height: 250px;
+
 }
 
 .grid-item2 {
@@ -66,6 +68,7 @@ html {
   background-image: url(../my_image/images/2.JPG);
   background-size: cover;
   border: 4px ridge burlywood;
+  height: 250px;
 
 }
 
@@ -74,6 +77,7 @@ html {
   background-image: url(../my_image/images/sonagi.JPG);
   background-size: cover;
   border: 4px ridge burlywood;
+  height: 250px;
 
 }
 
@@ -82,32 +86,73 @@ html {
   background-image: url(../my_image/images/4.JPG);
   background-size: cover;
   border: 4px ridge burlywood;
+  height: 250px;
 
 }
 
-.grid-item5 img {
+.grid-item5 {
+  background-color: #eee;
+  background-image: url(../my_image/images/5.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+  height: 250px;
+
+}
+
+.grid-item6 {
+  background-color: #eee;
+  background-image: url(../my_image/images/6.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+  height: 250px;
+
+}
+
+.grid-item7 {
+  background-color: #eee;
+  background-image: url(../my_image/images/7.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+  height: 250px;
+
+}
+
+.grid-item8 {
+  background-color: #eee;
+  background-image: url(../my_image/images/8.JPG);
+  background-size: cover;
+  border: 4px ridge burlywood;
+  height: 250px;
+
+}
+
+/* .grid-item5 img {
   width: 100%;
   border: 4px ridge burlywood;
+  height: 250px;
 
 }
 
 .grid-item6 img {
   width: 100%;
   border: 4px ridge burlywood;
+  height: 250px;
 
 }
 
 .grid-item7 img {
   width: 100%;
   border: 4px ridge burlywood;
+  height: 250px;
 
 }
 
 .grid-item8 img {
   width: 100%;
   border: 4px ridge burlywood;
+  height: 250px;
 
-}
+} */
 
 
 .grid-item h3 {
@@ -127,7 +172,7 @@ html {
     /* column 과 row조정전 grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 250px 250px 250px; */
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 250px;
     margin-left: 5px;
     margin-right: 5px;
   }
