@@ -82,7 +82,7 @@ html {
 }
 
 .grid-item4 {
-  background-color: #eee;
+  /* background-color: #eee; */
   background-image: url(../my_image/images/4.JPG);
   background-size: cover;
   border: 4px ridge burlywood;
@@ -92,10 +92,11 @@ html {
 
 .grid-item5 {
   background-color: #eee;
-  background-image: url(../my_image/images/5.JPG);
+  background-image: url(../my_image/images/1.JPG);
   background-size: cover;
   border: 4px ridge burlywood;
   height: 250px;
+  line-height: 18px;
 
 }
 
@@ -172,7 +173,8 @@ html {
     /* column 과 row조정전 grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 250px 250px 250px; */
     grid-template-columns: 1fr;
-    grid-template-rows: 250px;
+    /* grid-template-rows: 250px; */
+    grid-template-rows: repeat(8, 250px);
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -240,12 +242,29 @@ form.index-login {
   position: absolute;
   left: 100px;
   border-style: outset;
+  padding: 5px;
+  margin: 5px;
 }
 
 .sonagi {
   text-align: center;
   font-size: 1.8rem;
   font-weight: bolder;
+}
+
+.sonagi-p {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.sonagi-small {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: rgb(227, 18, 18);
+  z-index: 10000;
 }
 
 

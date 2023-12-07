@@ -307,7 +307,7 @@ input:-webkit-autofill:active {
   align-items: center;
   border: 1px solid #ddd;
   margin-top: -40px;
-  padding: 30px 40px 40px;
+  padding: 5px;
   border-radius: 2px;
   background-color: white;
 }
